@@ -86,7 +86,7 @@ function Coins({}: ICoinsProps) {
   return (
     <Container>
       <Helmet>
-        <title>Coin</title>
+        <title>Coi</title>
       </Helmet>
       <Header>
         <Title>Coin</Title>
