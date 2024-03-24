@@ -1,5 +1,5 @@
 {
-  "name": "nomad-card-move",
+  "name": "react-annimations",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,12 +8,11 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.91",
-    "@types/react": "^18.2.67",
+    "@types/react": "^18.2.69",
     "@types/react-dom": "^18.2.22",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
-    "react-beautiful-dnd": "^13.1.1",
     "react-dom": "^18.2.0",
-    "react-hook-form": "^7.51.1",
     "react-scripts": "5.0.1",
     "recoil": "^0.7.7",
     "styled-components": "^6.1.8",
@@ -45,7 +44,6 @@
     ]
   },
   "devDependencies": {
-    "@types/react-beautiful-dnd": "^13.1.8",
     "@types/styled-components": "^5.1.34"
   }
 }
