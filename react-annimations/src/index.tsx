@@ -64,7 +64,7 @@ body {
   color:black;
   line-height: 1.2;
   height: 100%;
-  background:linear-gradient(135deg,#e09,#d0e);
+  background: linear-gradient(135deg, rgb(238, 0, 153), rgb(221, 0, 238));
 }
 a {
   text-decoration:none;
