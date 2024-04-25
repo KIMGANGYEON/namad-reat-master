@@ -158,7 +158,10 @@ function Coin() {
   );
   const { isLoading: tickersLoading, data: tickersData } = useQuery<PriceData>(
     ["tickers", coinId],
-    () => fetchCoinTickers(coinId)
+    () => fetchCoinTickers(coinId),
+    {
+      refetchInterval: 2000,
+    }
   );
   // // const [loading, setLoading] = useState(true);
   // // const [info, setInfo] = useState<InfoData>();
@@ -201,7 +204,7 @@ function Coin() {
             </OverviewItem>
             <OverviewItem>
               <span>Open Source:</span>
-              <span>{infoData?.open_source ? "Yes" : "No"}</span>
+              <span>{tickersData?.quotes.USD.price}</span>
             </OverviewItem>
           </Overview>
           <Description>{infoData?.description}</Description>
@@ -217,17 +220,15 @@ function Coin() {
           </Overview>
           <Tabs>
             <Tab $isActive={chartMatch !== null}>
-              <Link to={`/${coinId}/chart`}>
-                <Chart coinId={coinId} />
-              </Link>
+              <Link to={`/${coinId}/chart`}>Chart</Link>
             </Tab>
             <Tab $isActive={priceMatch !== null}>
-              <Link to={`/${coinId}/price`}>
-                <Price />
-              </Link>
+              <Link to={`/${coinId}/price`}>Price</Link>
             </Tab>
           </Tabs>
-          <Outlet />
+          {/* <Chart coinId={coinId} />
+          <Price /> */}
+          <Outlet context={{ coinId }} />
         </>
       )}
     </Container>
